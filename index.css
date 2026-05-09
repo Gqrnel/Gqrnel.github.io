@@ -6,10 +6,53 @@ body {
 	background: #fff;
 	background-size: 40px 40px;
 }
+#navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff; /* 背景色を白に設定 */
+	z-index: 1000;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 影を追加して目立たせる */
+}
+.nav-container {
+	display: flex;
+	align-items: center;
+	padding: 10px 30px;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+	margin-right: 20px;
+}
+.logo a {
+	color: #000;
+	text-decoration: none;
+}
+.nav-links {
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+.nav-links li {
+	margin-left: 20px;
+}
+.nav-links a {
+	color: #000;
+	text-decoration: none;
+	padding: 10px;
+}
+.nav-links a:hover {
+	background-color: #f0f0f0;
+}
 #outer {
 	margin: 0 auto;
 	width: 1000px;
 	background-color: #fff;
+	padding-top: 80px; /* ナビバーの高さに合わせて調整 */
 }
 header {
 	height: 80px;
