@@ -55,8 +55,15 @@ body {
 	padding-top: 80px; /* ナビバーの高さに合わせて調整 */
 }
 header {
-	height: 80px;
-	padding: 20px 30px;
+	min-height: 320px;
+	padding: 80px 30px 20px;
+	background-image: url("images/gamel.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: rgba(0, 0, 0, 0.35);
+	background-blend-mode: multiply;
+	color: #fff;
 }
 .header-inner {
 	padding: 0;
