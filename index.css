@@ -145,6 +145,11 @@ blockquote {
 aside {
 	padding: 10px 0;
 }
+header {
+	background-size: contain;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
 .header-inner {
 	font-size: 10px;
 }
