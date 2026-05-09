@@ -1,11 +1,22 @@
 @charset "UTF-8";
+/* body全体のレイアウト設定 */
 body {
-	margin: 0;
-	padding: 0;
-	line-height: 1.6;
-	background: #fff;
-	background-size: 40px 40px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #000;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url("images/gamel.jpg");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
 #navbar {
 	position: fixed;
 	top: 0;
@@ -48,29 +59,36 @@ body {
 .nav-links a:hover {
 	background-color: #f0f0f0;
 }
+
 #outer {
 	margin: 0 auto;
 	width: 1000px;
 	background-color: #fff;
 	padding-top: 80px; /* ナビバーの高さに合わせて調整 */
+    background-color: transparent; /* 背景を透明にする */
 }
 header {
-	min-height: 320px;
-	padding: 80px 30px 20px;
-	background-image: url("images/gamel.jpg");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-color: rgba(0, 0, 0, 0.35);
-	background-blend-mode: multiply;
+	height: calc(100vh - 80px);
+	min-height: calc(100vh - 80px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 120px 30px 40px;
+	position: relative;
+	background-color: transparent;
 	color: #fff;
+	overflow: hidden;
 }
+
 .header-inner {
-	padding: 0;
-	font-size: 12px;
+	position: relative;
+	z-index: 1;
+	padding: 20px;
+	max-width: 860px;
+	text-align: center;
 }
 h1 {
-	font-size: 24px;
+	font-size: 48px;
 	margin: 0;
 	padding: 0;
 }
@@ -111,6 +129,10 @@ main {
 }
 section {
 	margin-bottom: 30px;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 footer {
 	text-align: center;
@@ -126,39 +148,49 @@ blockquote {
 	margin: 10px;
 }
 @media (max-width: 768px) {
-#outer {
-	width: 100%;
-	padding: 0;
-}
-#content {
-	padding: 0 10px;
-}
-.inner, aside {
-	float: none;
-	width: 100%;
-}
-.inner {
-	margin: 0;
-	padding: 10px 0;
-	box-shadow: none;
-}
-aside {
-	padding: 10px 0;
-}
-header {
-	background-size: contain;
-	background-position: top center;
-	background-repeat: no-repeat;
-}
-.header-inner {
-	font-size: 10px;
-}
-h1 {
-	font-size: 20px;
-}
-h2 {
-	font-size: 20px;
-}
+	#outer {
+		width: 100%;
+		padding: 0;
+	}
+	#content {
+		padding: 0 10px;
+	}
+	.inner, aside {
+		float: none;
+		width: 100%;
+	}
+	.inner {
+		margin: 0;
+		padding: 10px 0;
+		box-shadow: none;
+	}
+	aside {
+		padding: 10px 0;
+	}
+	header {
+		height: calc(100vh - 80px);
+		min-height: calc(100vh - 80px);
+		padding: 120px 20px 40px;
+	}
+	header p {
+		font-size: 24px;
+		margin-top: 16px;
+	}
+	.header-inner {
+		font-size: 12px;
+	}
+	.header-inner h1 {
+		font-size: 36px;
+	}
+	.header-inner p{
+		font-size: 20px;
+	}
+	h1 {
+		font-size: 28px;
+	}
+	h2 {
+		font-size: 20px;
+	}
 }
 
 @media (min-width: 769px) {
@@ -192,4 +224,16 @@ h2 {
 		width: calc(100% - 220px);
 		padding-top: 0;
 	}
+	h1 {
+		font-size: 24px;
+	}
+	.header-inner h1 {
+		font-size: 48px;
+	}
+	.header-inner p {
+		font-size: 20px;
+	}
+nav {
+    background-color: rgba(255, 255, 255, 0.8); /* ナビバーを半透明にする例 */
+}
 }
