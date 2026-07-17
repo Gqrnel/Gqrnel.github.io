@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<title>Gamel's Home</title>
-<meta name="keywords" content="ページのキーワードA,B,C">
-<meta name="description" content="ページの説明">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <title>がめるのホームページ</title>
+    <meta name="keywords" content="ページのキーワードA,B,C">
+    <meta name="description" content="ページの説明">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
+    <!-- ナビゲーションバー -->
     <nav id="navbar">
         <div class="nav-container">
             <div class="logo">
@@ -16,27 +18,62 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#works">Works</a></li>
+                <li><a href="#articles">Articles</a></li>
                 <li><a href="#profile">Profile</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <!-- 他のリンクを追加 -->
             </ul>
         </div>
     </nav>
+
+
     <div id="outer">
+        <!-- ヘッダー-->
+        <header id="header">
+            <div class="header-inner">
+                <h1>GAMEL's Home</h1>
+                <p>Do or do not. There is no try.</p>
+            </div>
+        </header>
+
+        <!-- ここからメイン -->
         <main>
-            <header>
-                <div class="header-inner">
-                    <h1>GAMEL's Home</h1>
-                    <p>Living to Create</p>
-                </div>
-            </header>
             <section id="works">
                 <h2>Works</h2>
-                <p>ここに作品</p>
+                <h3>New Illustrations</h3>
+                <div class="works-slider">
+                    <button class="slider-button prev">&#10094;</button>
+                    <div class="slider-viewport">
+                        <div class="work-list" id="pixiv-list"></div>
+                    </div>
+                    <button class="slider-button next">&#10095;</button>
+                </div>
+
+                <h3>New Videos</h3>
+                <div class="works-slider">
+                    <button class="slider-button prev">&#10094;</button>
+                    <div class="slider-viewport">
+                        <div class="work-list" id="youtube-list"></div>
+                    </div>
+                    <button class="slider-button next">&#10095;</button>
+                </div>
             </section>
+
+            <section id="articles">
+                <h2>Articles</h2>
+                <p>Fanboxの記事最新2-3件</p>
+            </section>
+
             <section id="profile">
                 <h2>Profile</h2>
-                <p>ここにプロフィール</p>
+                <p>がめるのプロフィール</p>
             </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>お問い合わせ</p>
+            </section>
+
         </main>
         <footer>ふったー</footer>
     </div>
